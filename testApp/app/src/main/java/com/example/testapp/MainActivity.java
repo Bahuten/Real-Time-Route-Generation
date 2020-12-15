@@ -19,13 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        connect = findViewById(R.id.connect);
-        connect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                postRequest("Message posted", url);
-            }
-        });
+
     }
     private RequestBody buildRequestBody(String msg) {
         postBodyString = msg;
@@ -33,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         requestBody = RequestBody.create(postBodyString, mediaType);
         return requestBody;
     }
-
 
     private void postRequest(String message, String URL) {
         RequestBody requestBody = buildRequestBody(message);
@@ -49,15 +42,10 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-
-
                         Toast.makeText(MainActivity.this, "Something went wrong:" + " " + e.getMessage(), Toast.LENGTH_SHORT).show();
                         call.cancel();
-
-
                     }
                 });
-
             }
 
             @Override
@@ -72,8 +60,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
-
-
             }
         });
     }
