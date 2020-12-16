@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.*;
-import android.view.*;
+
 import java.io.IOException;
 import okhttp3.*;
 
-public class MainActivity extends AppCompatActivity {
+public class restuarant extends AppCompatActivity {
     private String url = "http://10.0.2.2:5000/";
     private String postBodyString;
     private MediaType mediaType;
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.restuarant);
 
     }
     private RequestBody buildRequestBody(String msg) {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(MainActivity.this, "Something went wrong:" + " " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(restuarant.this, "Something went wrong:" + " " + e.getMessage(), Toast.LENGTH_SHORT).show();
                         call.cancel();
                     }
                 });
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            Toast.makeText(MainActivity.this, response.body().string(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(restuarant.this, response.body().string(), Toast.LENGTH_LONG).show();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
