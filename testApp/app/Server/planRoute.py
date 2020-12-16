@@ -1,10 +1,6 @@
 import jsonify
 import math
-import numpy
-import uuid
 import threading
-
-SIZE = 800
 
 class Room(object):
     def __init__(self,x,y):
