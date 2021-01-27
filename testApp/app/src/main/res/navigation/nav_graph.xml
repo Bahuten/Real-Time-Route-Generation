@@ -2,4 +2,45 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/nav_graph" />
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/main">
+    <fragment
+        android:id="@+id/main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
+        tools:layout="@layout/restuarant" />
+    <fragment
+        android:id="@+id/table"
+        android:name="com.example.testapp.table"
+        android:label="fragment_table"
+        tools:layout="@layout/fragment_table">
+    </fragment>
+    <fragment
+        android:id="@+id/exit"
+        android:name="com.example.testapp.exit"
+        android:label="fragment_exit"
+        tools:layout="@layout/fragment_exit" />
+    <fragment
+        android:id="@+id/bar"
+        android:name="com.example.testapp.bar"
+        android:label="fragment_bar"
+        tools:layout="@layout/fragment_bar" />
+    <fragment
+        android:id="@+id/toilet"
+        android:name="com.example.testapp.toilet"
+        android:label="fragment_toilet"
+        tools:layout="@layout/fragment_toilet" />
+    <fragment
+        android:id="@+id/kitchen"
+        android:name="com.example.testapp.kitchen"
+        android:label="fragment_kitchen"
+        tools:layout="@layout/fragment_kitchen" />
+    <fragment
+        android:id="@+id/office"
+        android:name="com.example.testapp.office"
+        android:label="fragment_office"
+        tools:layout="@layout/fragment_office" />
+</navigation>
