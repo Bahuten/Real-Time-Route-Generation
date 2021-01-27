@@ -14,5 +14,5 @@
         android:gravity="center"
         android:text="@string/office"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:lineHeight="50" />
+        app:lineHeight="50dp" />
 </FrameLayout>

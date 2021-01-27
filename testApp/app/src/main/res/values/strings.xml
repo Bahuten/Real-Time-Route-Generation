@@ -10,4 +10,5 @@
     <string name="exit_door">The Exit Door</string>
     <string name="toilet">The Toilet</string>
     <string name="table">The Table</string>
+    <string name="hello">hello</string>
 </resources>
