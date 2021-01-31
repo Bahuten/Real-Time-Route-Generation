@@ -3,7 +3,6 @@ package com.example.testapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.*;
 
 import java.io.IOException;
@@ -14,18 +13,12 @@ public class restuarant extends AppCompatActivity {
     private String postBodyString;
     private MediaType mediaType;
     private RequestBody requestBody;
-    private Button connect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.restuarant);
-        connect = findViewById(R.id.table1);
-       /* connect.setOnClickListener(v -> {
-            postRequest("your message: ", url);
-        });*/
         postRequest("your message: ",url);
-
     }
     private RequestBody buildRequestBody(String msg) {
         postBodyString = msg;
