@@ -9,6 +9,7 @@ import java.io.IOException;
 import okhttp3.*;
 
 public class restuarant extends AppCompatActivity {
+
     private String url = "http://" + "10.0.2.2" + ":" + 5000 + "/";
     private String postBodyString;
     private MediaType mediaType;
@@ -19,7 +20,9 @@ public class restuarant extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.restuarant);
         postRequest("your message: ",url);
+        System.out.println("Hello");
     }
+
     private RequestBody buildRequestBody(String msg) {
         postBodyString = msg;
         mediaType = MediaType.parse("text/plain");
