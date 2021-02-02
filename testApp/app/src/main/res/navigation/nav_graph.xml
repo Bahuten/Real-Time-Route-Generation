@@ -11,13 +11,31 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph"
-        tools:layout="@layout/restuarant" />
+        tools:layout="@layout/restuarant" >
+        <action
+            android:id="@+id/action_main_to_table"
+            app:destination="@id/table" />
+        <action
+            android:id="@+id/action_main_to_office"
+            app:destination="@id/office" />
+        <action
+            android:id="@+id/action_main_to_bar"
+            app:destination="@id/bar" />
+        <action
+            android:id="@+id/action_main_to_kitchen"
+            app:destination="@id/kitchen" />
+        <action
+            android:id="@+id/action_main_to_exit"
+            app:destination="@id/exit" />
+        <action
+            android:id="@+id/action_main_to_toilet"
+            app:destination="@id/toilet" />
+    </fragment>
     <fragment
         android:id="@+id/table"
         android:name="com.example.testapp.table"
         android:label="fragment_table"
-        tools:layout="@layout/fragment_table">
-    </fragment>
+        tools:layout="@layout/fragment_table"/>
     <fragment
         android:id="@+id/exit"
         android:name="com.example.testapp.exit"
