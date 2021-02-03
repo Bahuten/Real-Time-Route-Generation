@@ -18,16 +18,17 @@ def office():
 def bar():
     return "Bar"
 
-@app.route('/Toilet', methods=['GET','POST'])
+@app.route('/toilet', methods=['GET','POST'])
 def toilet():
     return "Toilet"
 
-@app.route('/Kitchen', methods=['GET','POST'])
-def toilet():
+@app.route('/kitchen', methods=['GET','POST'])
+def Kitchen():
     return "Kitchen"
 
-@app.route('/exit_door', methods=['GET','POST'])
-def toilet():
+@app.route('/exit', methods=['GET','POST'])
+def exit():
     return "Exit door"
 
-app.run(host="0.0.0.0", port=5000, debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
