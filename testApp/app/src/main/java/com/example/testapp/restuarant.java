@@ -1,26 +1,34 @@
 package com.example.testapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavDestination;
+import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.*;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.io.IOException;
 import okhttp3.*;
 
-public class restuarant extends AppCompatActivity {
+public class restuarant extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private String url = "http://" + "10.0.2.2" + ":" + 5000 + "/";
     private String postBodyString;
     private MediaType mediaType;
     private RequestBody requestBody;
+    public NavDestination h;
+    private Button b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.restuarant);
         postRequest("your message: ",url);
-        System.out.println("Hello");
     }
 
     private RequestBody buildRequestBody(String msg) {
@@ -58,5 +66,10 @@ public class restuarant extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return false;
     }
 }
