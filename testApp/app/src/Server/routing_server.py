@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route('/<start>/<end>', methods=['GET', 'POST'])
+@app.route('/calculate_route', methods=['GET', 'POST'])
 def route(start, end):
     coords = []
     a_star = _AStarSearch(start, end, coords)
@@ -52,30 +52,6 @@ def Main():
 def json():
     p = [1231, 124566, 98735]
     return jsonify({"points": p})
-
-@app.route('/table', methods=['GET', 'POST'])
-def table():
-    return "Table"
-
-@app.route('/office', methods=['GET', 'POST'])
-def office():
-    return "Office"
-
-@app.route('/bar', methods=['GET', 'POST'])
-def bar():
-    return "Bar"
-
-@app.route('/toilet', methods=['GET', 'POST'])
-def toilet():
-    return "Toilet"
-
-@app.route('/kitchen', methods=['GET', 'POST'])
-def kitchen():
-    return "Kitchen"
-
-@app.route('/exit', methods=['GET', 'POST'])
-def exit_door():
-    return "Exit door"
 
 if __name__ == "__main__":
     Main()
