@@ -17,4 +17,8 @@
     <string name="_12">12</string>
     <string name="_13">13</string>
     <string name="_14">14</string>
+    <string name="office">office</string>
+    <string name="toilet">toilet</string>
+    <string name="bar">bar</string>
+    <string name="exit_door">The Exit Door</string>
 </resources>
