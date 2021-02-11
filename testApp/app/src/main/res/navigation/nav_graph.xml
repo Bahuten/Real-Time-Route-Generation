@@ -4,7 +4,7 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph"
             app:startDestination="@id/main">
-    <fragment
+    <activity
         android:id="@+id/main"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
@@ -12,4 +12,14 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph"
         tools:layout="@layout/restuarant" />
+    <activity
+        android:id="@+id/routeOutput"
+        android:name="com.example.testapp.RouteOutput"
+        android:label="route_output"
+        tools:layout="@layout/route_output" />
+    <activity
+        android:id="@+id/login"
+        android:name="com.example.testapp.Login"
+        android:label="login"
+        tools:layout="@layout/login" />
 </navigation>
