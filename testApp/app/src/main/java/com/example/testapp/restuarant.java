@@ -2,9 +2,11 @@ package com.example.testapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import java.io.IOException;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -20,14 +22,14 @@ public class restuarant extends AppCompatActivity {
     private String postBodyString;
     private MediaType mediaType;
     private RequestBody requestBody;
-    private Button table1, table2, table3, table4, table5, table6, table7, table8, table9, table10, table11, table12, table13, table14, bar, office, toilet, kitchen, exit_door;
+    private Button table1, table2, table3, table4, table5, table6, table7, table8, table9, table10, table11, table12, table13, table14, bar, office, toilet, exit_door;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.restuarant);
         postRequest("your message: ",url);
-        setupButtons();
+        Actions();
 
     }
 
@@ -68,117 +70,156 @@ public class restuarant extends AppCompatActivity {
         });
     }
 
-    private void setupButtons() {
+    private void routeJSON(String data) throws JSONException {
+        JSONObject route = new JSONObject();
+        JSONArray nodes = new JSONArray();
+        nodes.put(data);
+        route.put("Nodes", nodes);
+    }
+
+    private void Actions() {
         table1 = findViewById(R.id.table1);
-        table1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table1);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table1.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table2 = findViewById(R.id.table2);
-        table2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table2);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table2.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table3 = findViewById(R.id.table3);
-        table3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table3);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table3.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table4 = findViewById(R.id.table4);
-        table4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table4);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table4.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table5 = findViewById(R.id.table5);
-        table5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table5);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table5.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table6 = findViewById(R.id.table6);
-        table6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table6);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table6.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table7 = findViewById(R.id.table7);
-        table7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table7);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table7.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table8 = findViewById(R.id.table8);
-        table8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table8);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table8.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table9 = findViewById(R.id.table9);
-        table9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table1);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table9.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table10 = findViewById(R.id.table10);
-        table10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table10);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table10.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table11 = findViewById(R.id.table11);
-        table11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table11);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table11.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table12 = findViewById(R.id.table12);
-        table12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table12);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table12.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table13 = findViewById(R.id.table13);
-        table13.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table13);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table13.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
         table14 = findViewById(R.id.table14);
-        table14.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table14);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
+        table14.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        });
+        bar = findViewById(R.id.bar);
+        bar.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        });
+        office = findViewById(R.id.office);
+        office.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        });
+        exit_door = findViewById(R.id.exit);
+        exit_door.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        });
+        toilet = findViewById(R.id.toilet);
+        toilet.setOnClickListener(v -> {
+            try {
+                routeJSON("()");
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         });
     }
