@@ -2,9 +2,11 @@ package com.example.testapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.view.View;
+import android.util.JsonReader;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.io.FileReader;
 import java.io.IOException;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -26,7 +28,7 @@ public class RouteOutput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.route_output);
         postRequest("your message: ",url);
-        setupButtons();
+        Actions();
     }
     private RequestBody buildRequestBody(String msg) {
         postBodyString = msg;
@@ -65,118 +67,78 @@ public class RouteOutput extends AppCompatActivity {
         });
     }
 
-    private void setupButtons() {
+    private void Actions() {
         table1 = findViewById(R.id.table1);
-        table1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table1);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table1.setOnClickListener(v -> {
+
         });
         table2 = findViewById(R.id.table2);
-        table2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table2);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table2.setOnClickListener(v -> {
+
         });
         table3 = findViewById(R.id.table3);
-        table3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table3);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table3.setOnClickListener(v -> {
+
         });
         table4 = findViewById(R.id.table4);
-        table4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table4);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table4.setOnClickListener(v -> {
+
         });
         table5 = findViewById(R.id.table5);
-        table5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table5);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table5.setOnClickListener(v -> {
+
         });
         table6 = findViewById(R.id.table6);
-        table6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table6);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table6.setOnClickListener(v -> {
+
         });
         table7 = findViewById(R.id.table7);
-        table7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table7);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table7.setOnClickListener(v -> {
+
         });
         table8 = findViewById(R.id.table8);
-        table8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table8);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table8.setOnClickListener(v -> {
+
         });
         table9 = findViewById(R.id.table9);
-        table9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table1);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table9.setOnClickListener(v -> {
+
         });
         table10 = findViewById(R.id.table10);
-        table10.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table10);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table10.setOnClickListener(v -> {
+
         });
         table11 = findViewById(R.id.table11);
-        table11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table11);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table11.setOnClickListener(v -> {
+
         });
         table12 = findViewById(R.id.table12);
-        table12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table12);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table12.setOnClickListener(v -> {
+
         });
         table13 = findViewById(R.id.table13);
-        table13.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table13);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table13.setOnClickListener(v -> {
+
         });
         table14 = findViewById(R.id.table14);
-        table14.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Point point = getPointOfView(table14);
-                System.out.println("view point x,y (" + point.x + ", " + point.y + ")");
-            }
+        table14.setOnClickListener(v -> {
+
+        });
+        bar = findViewById(R.id.bar);
+        bar.setOnClickListener(v -> {
+
+        });
+        office = findViewById(R.id.office);
+        office.setOnClickListener(v -> {
+
+        });
+        exit_door = findViewById(R.id.exit);
+        exit_door.setOnClickListener(v -> {
+
+        });
+        toilet = findViewById(R.id.toilet);
+        toilet.setOnClickListener(v -> {
+
         });
     }
 
