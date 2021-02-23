@@ -30,7 +30,6 @@ public class restuarant extends AppCompatActivity {
         setContentView(R.layout.restuarant);
         postRequest("your message: ",url);
         Actions();
-
     }
 
     private RequestBody buildRequestBody(String msg) {
@@ -61,7 +60,8 @@ public class restuarant extends AppCompatActivity {
             public void onResponse(Call call, final Response response) throws IOException {
                 runOnUiThread(() -> {
                     try {
-                        Toast.makeText(restuarant.this, response.body().string(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(restuarant.this, response.body().string(), Toast.LENGTH_LONG).show();
+                        System.out.println(response.body().string());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
