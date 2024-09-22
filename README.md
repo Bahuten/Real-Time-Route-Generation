@@ -1,4 +1,4 @@
-# BSc-Computing-Project---RouteAI
+# Real-Time Route Generation for Social Distancing
 
 A project focused on providing routes indoors based on the use of Artifical Intelligence stategy.
 
